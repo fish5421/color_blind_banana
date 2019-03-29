@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108066967-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-108066967-1');
+</script>
+
+	<meta charset="utf-8"/>
+    <link rel="icon" type="image/png" href="../assets/img/bananas.ico">
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>Is My Banana Ripe?</title>
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/paper-kit.css?v=2.0.1" rel="stylesheet"/>
+    <link href="../assets/css/demo.css" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+
+
+    <!--     Fonts and icons     -->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,300,700' rel='stylesheet' type='text/css'>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../assets/css/nucleo-icons.css" rel="stylesheet">
+<!-- start Mixpanel --><script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+mixpanel.init("1804699bb28b5f818ab168865b5e2ded");</script><!-- end Mixpanel -->
+</head>
+<body>
+    <nav class="navbar navbar-toggleable-md fixed-top navbar-transparent" color-on-scroll="300">
+        <div class="container">
+			<div class="navbar-translate">
+	            <button class="navbar-toggler navbar-toggler-right navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-bar"></span>
+					<span class="navbar-toggler-bar"></span>
+					<span class="navbar-toggler-bar"></span>
+	            </button>
+	            <a class="navbar-brand" href=#>Banana Ripe</a>
+			</div>
+	        <div class="collapse navbar-collapse" id="navbarToggler">
+	            <ul class="navbar-nav ml-auto">
+	                <li class="nav-item">
+	                    <a href="#product" class="nav-link"><i class="nc-icon nc-book-bookmark"></i>  About</a>
+	                </li>
+<!--                     <li class="nav-item">
+                        <a href="../documentation/tutorial-components.html" target="_blank" class="nav-link"><i class="nc-icon nc-book-bookmark"></i>  Reading</a>
+                    </li>
+ -->	            </ul>
+	        </div>
+		</div>
+    </nav>
+
+		<div class="page-header" data-parallax="true" style="background-image: url('../assets/img/banana.jpg');">
+			<div class="filter"></div>
+			<div class="container">
+			    <div class="motto text-center">
+			        <h1>Is My Banana Ripe?</h1>
+			        <h3>Text the below number to help determine if your banana is ripe </h3>
+			        <!-- <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-outline-neutral btn-round"><i class="fa fa-play"></i>Watch video</a> -->
+      <div class="container">
+        <div id="content" style="margin-top:2em">{% block content %}{% endblock %}</div>
+      </div>
+			    </div>
+			</div>
+    	</div>
+        <div class="main">
+			<div class="section text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2" id="product">
+                        <h2 class="title">Let's talk product</h2>
+                        <h5 class="description">Throughout my life I have observered that people who are color blind often need the help of loved once to help with their clothing option. Because of this I developed <a href= "www.colorblindmatching.com"> Color Blind Matching.</a> While testing this out I discovered that it is diffucult for those who are color blind to tell if a banana was ripe. Just text 248-671-4065 and we will tell you if your banana looks ripe. </h5>
+                        <br>
+                        <img src="../assets/img/bananas.svg" alt="testing">
+                    </div>
+                </div>
+				<br/><br/>
+<!-- 				<div class="row">
+					<div class="col-md-3">
+						<div class="info">
+							<div class="icon icon-danger">
+								<i class="nc-icon nc-album-2"></i>
+							</div>
+							<div class="description">
+								<h4 class="info-title">Beautiful Gallery</h4>
+								<p class="description">Spend your time generating new ideas. You don't have to think of implementing.</p>
+								<a href="#pkp" class="btn btn-link btn-danger">See more</a>
+							</div>
+						</div>
+					</div>
+				</div> -->
+            </div>
+        </div>
+
+ 		<!-- <div class="section section-dark text-center">
+            <div class="container">
+                <h2 class="title">Let's talk about us</h2>
+				<div class="row">
+    				<div class="col-md-4">
+                        <div class="card card-profile card-plain">
+                            <div class="card-avatar">
+                                <a href="#avatar"><img src="../assets/img/faces/clem-onojeghuo-3.jpg" alt="..."></a>
+                            </div>
+                            <div class="card-block">
+                                <a href="#paper-kit">
+                                    <div class="author">
+                                        <h4 class="card-title">Henry Ford</h4>
+                                        <h6 class="card-category">Product Manager</h6>
+                                    </div>
+                                </a>
+                                <p class="card-description text-center">
+                                Teamwork is so important that it is virtually impossible for you to reach the heights of your capabilities or make the money that you want without becoming very good at it.
+                                </p>
+                            </div>
+                            <div class="card-footer text-center">
+                                <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-twitter"></i></a>
+                                <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-google-plus"></i></a>
+                                <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+    				</div>
+
+    				<div class="col-md-4">
+                        <div class="card card-profile card-plain">
+                            <div class="card-avatar">
+                                <a href="#avatar"><img src="../assets/img/faces/joe-gardner-2.jpg" alt="..."></a>
+                            </div>
+                            <div class="card-block">
+                                <a href="#paper-kit">
+                                    <div class="author">
+                                        <h4 class="card-title">Sophie West</h4>
+                                        <h6 class="card-category">Designer</h6>
+                                    </div>
+                                </a>
+                                <p class="card-description text-center">
+                                A group becomes a team when each member is sure enough of himself and his contribution to praise the skill of the others. No one can whistle a symphony. It takes an orchestra to play it.
+                                </p>
+                            </div>
+                            <div class="card-footer text-center">
+                                <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-twitter"></i></a>
+                                <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-google-plus"></i></a>
+                                <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+    				</div>
+
+    				<div class="col-md-4">
+                        <div class="card card-profile card-plain">
+                            <div class="card-avatar">
+                                <a href="#avatar"><img src="../assets/img/faces/erik-lucatero-2.jpg" alt="..."></a>
+                            </div>
+                            <div class="card-block">
+                                <a href="#paper-kit">
+                                    <div class="author">
+                                        <h4 class="card-title">Robert Orben</h4>
+                                        <h6 class="card-category">Developer</h6>
+                                    </div>
+                                </a>
+                                <p class="card-description text-center">
+                                The strength of the team is each individual member. The strength of each member is the team. If you can laugh together, you can work together, silence isn’t golden, it’s deadly.
+                                </p>
+                            </div>
+                            <div class="card-footer text-center">
+                                <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-twitter"></i></a>
+                                <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-google-plus"></i></a>
+                                <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+    				</div>
+    			</div>
+        	</div>
+    	</div>  -->
+
+<!--             <div class="section section-dark landing-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 offset-md-2">
+                            <h2 class="text-center">Keep in touch?</h2>
+                            <form class="contact-form">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Name</label>
+										<div class="input-group">
+	                                        <span class="input-group-addon">
+	                                            <i class="nc-icon nc-single-02"></i>
+	                                        </span>
+	                                        <input type="text" class="form-control" placeholder="Name">
+	                                    </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>Email</label>
+										<div class="input-group">
+											<span class="input-group-addon">
+												<i class="nc-icon nc-email-85"></i>
+											</span>
+											<input type="text" class="form-control" placeholder="Email">
+										</div>
+                                    </div>
+                                </div>
+                                <label>Message</label>
+                                <textarea class="form-control" rows="4" placeholder="Tell us your thoughts and feelings..."></textarea>
+                                <div class="row">
+                                    <div class="col-md-4 offset-md-4">
+                                        <button class="btn btn-danger btn-lg btn-fill">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+	<footer class="footer section-dark">
+    <script src="{{ url_for('static', filename='js/main.js') }}" type="text/javascript"></script>
+		<div class="container">
+			<div class="row">
+				<div class="credits ml-auto">
+					<span class="copyright">
+						© <script>document.write(new Date().getFullYear())</script>, made with <i class="fa fa-heart heart"></i> by Peter Correia
+					</span>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+
+<!-- Core JS Files -->
+<script src="../assets/js/jquery-3.2.1.js" type="text/javascript"></script>
+<script src="../assets/js/jquery-ui-1.12.1.custom.min.js" type="text/javascript"></script>
+<script src="../assets/js/tether.min.js" type="text/javascript"></script>
+<script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+<!--  Paper Kit Initialization snd functons -->
+<script src="../assets/js/paper-kit.js?v=2.0.1"></script>
+
+</html>
